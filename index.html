@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ashish Naikade | .NET Backend Developer</title>
-<meta name="description" content="Portfolio of Ashish Naikade, a .NET Backend Developer specializing in ASP.NET Core Web API, SQL Server and Clean Architecture.">
+<title>Ashish Naikade | .NET Developer · NexaERP &amp; NexaHRM</title>
+<meta name="description" content="Ashish Naikade, .NET Backend Developer and creator of NexaERP and NexaHRM, business software for growing companies. Coming soon.">
 <meta name="theme-color" content="#070914">
-<meta property="og:title" content="Ashish Naikade | .NET Backend Developer">
-<meta property="og:description" content="ASP.NET Core Web API, SQL Server, Clean Architecture. Explore projects, architecture and code samples.">
+<meta property="og:title" content="Ashish Naikade | NexaERP &amp; NexaHRM">
+<meta property="og:description" content="NexaERP and NexaHRM: business software for growing companies. Coming soon.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'%3EAN%3C/text%3E%3C/svg%3E">
 
@@ -23,6 +23,12 @@
   if (m) m.setAttribute('content', t === 'light' ? '#f5f7fc' : '#070914');
 })();
 </script>
+
+<!-- SF Pro shows automatically on Apple devices. Inter is a close look-alike fallback for Windows/Android/Linux
+     (the browser only downloads it when SF Pro is not available). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -42,11 +48,8 @@
   <ul class="nav-links" id="menu">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#architecture">Architecture</a></li>
-    <li><a href="#code">Code</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
@@ -65,16 +68,16 @@
 <!-- HERO -->
 <section id="home">
   <div class="hero-text">
-    <span class="badge"><i class="dot"></i> Open to .NET backend opportunities</span>
+    <span class="badge"><i class="dot"></i> NexaERP &amp; NexaHRM coming soon</span>
     <h1 class="grad">Ashish Naikade</h1>
     <div class="typed" aria-live="off">I build <span id="typed"></span><i class="cursor"></i></div>
-    <p class="lead">Junior .NET Developer crafting secure, scalable and high-performance REST APIs with ASP.NET Core, SQL Server and Clean Architecture.</p>
+    <p class="lead">Junior .NET Developer and founder of Nexa products: business software designed to help growing companies run smoothly.</p>
     <div class="btns">
-      <a href="assets/resume/Ashish_Naikade_Resume.pdf" class="btn btn-primary" download>
+      <a href="#products" class="btn btn-primary">Explore Products</a>
+      <a href="assets/resume/Ashish_Naikade_Resume.pdf" class="btn" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-        Download Resume
+        Resume
       </a>
-      <a href="#projects" class="btn">View Projects</a>
       <a href="#contact" class="btn">Contact</a>
     </div>
     <div class="socials">
@@ -90,11 +93,16 @@
     </div>
   </div>
   <div class="avatar-wrap">
-    <!-- Add your photo at assets/images/ashish.jpg. If it's missing, the initials show instead. -->
-    <div class="avatar">AN<img src="assets/images/ashish.jpg" alt="Portrait of Ashish Naikade" onerror="this.remove()"></div>
-    <span class="chip-float c1">ASP.NET Core</span>
-    <span class="chip-float c2">SQL Server</span>
-    <span class="chip-float c3">Clean Architecture</span>
+    <!-- Photo is a CSS background (assets/images/ashish.jpg), not an <img>, with a transparent shield on top.
+         If the file is missing, the initials show instead. -->
+    <div class="avatar" id="avatar">
+      <span class="initials">AN</span>
+      <div class="photo" role="img" aria-label="Portrait of Ashish Naikade"></div>
+      <div class="shield"></div>
+    </div>
+    <span class="chip-float c1">NexaERP</span>
+    <span class="chip-float c2">NexaHRM</span>
+    <span class="chip-float c3">.NET Developer</span>
   </div>
   <div class="scroll-cue" aria-hidden="true"></div>
 </section>
@@ -102,311 +110,77 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="eyebrow reveal">About</div>
-  <h2 class="title reveal">A backend developer who <span class="grad">cares about structure</span></h2>
-  <p class="sub reveal">Clean architecture, fast queries and maintainable code, built into every API.</p>
+  <h2 class="title reveal">Developer by craft, <span class="grad">product builder by ambition</span></h2>
+  <p class="sub reveal">Software that is reliable, secure and built to last.</p>
   <div class="about-grid">
     <div class="card reveal">
-      <p>I specialize in <b>.NET backend development</b> and <b>RESTful API engineering</b>, with 1.5+ years of hands-on internship experience designing, developing and maintaining secure, scalable applications using ASP.NET Core Web API and SQL Server.</p>
-      <p>I'm proficient in ADO.NET, Entity Framework Core, Dapper and stored procedures, with a strong foundation in Onion Architecture, the Repository Pattern and the Mediator Pattern (MediatR).</p>
-      <p>I enjoy database design, query optimization, performance tuning and writing clean, production-ready code. I work in Agile (Scrum) teams and track sprints with Jira.</p>
+      <p>I specialize in <b>.NET backend development</b> and <b>RESTful API engineering</b>, with 1.5+ years of hands-on experience designing, developing and maintaining secure, scalable applications.</p>
+      <p>I enjoy database design, performance tuning and writing clean, production-ready code, and I work comfortably in Agile (Scrum) teams.</p>
+      <p>Today I'm channeling that experience into <b>NexaERP</b> and <b>NexaHRM</b>, two business products I'm building to bring to market.</p>
     </div>
     <div class="reveal" style="--d:.1s">
       <ul class="facts card" style="margin-bottom:14px">
         <li><span>Role</span> Junior .NET Developer</li>
+        <li><span>Founder of</span> NexaERP &amp; NexaHRM</li>
         <li><span>Based in</span> Pune, India</li>
-        <li><span>Focus</span> ASP.NET Core Web API, SQL Server</li>
         <li><span>Education</span> BBA (Computer Application)</li>
       </ul>
       <div class="stats">
         <div class="card stat"><b class="grad" data-count="1.5" data-suffix="+">0</b><small>Years of experience</small></div>
-        <div class="card stat"><b class="grad" data-count="2" data-suffix="">0</b><small>Enterprise systems built</small></div>
-        <div class="card stat"><b class="grad" data-count="3" data-suffix="">0</b><small>Data access tools</small></div>
         <div class="card stat"><b class="grad" data-count="2" data-suffix="">0</b><small>Products in development</small></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="eyebrow reveal">Skills</div>
-  <h2 class="title reveal">Technical <span class="grad">toolbox</span></h2>
-  <p class="sub reveal">Hover the strip to pause it, or browse the categories below.</p>
-
-  <div class="marquee reveal" aria-hidden="true">
-    <div class="marquee-track">
-      <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">ASP.NET Core</span><span class="chip">Web API</span><span class="chip">SQL Server</span><span class="chip">Dapper</span><span class="chip">Entity Framework Core</span><span class="chip">ADO.NET</span><span class="chip">MediatR</span><span class="chip">Onion Architecture</span><span class="chip">Repository Pattern</span><span class="chip">Stored Procedures</span><span class="chip">Git</span><span class="chip">Jira</span><span class="chip">Scrum</span>
-    </div>
-  </div>
-
-  <div data-tabs class="reveal">
-    <div class="tablist" role="tablist" aria-label="Skill categories">
-      <button class="tab" role="tab" id="t-be" aria-controls="p-be" aria-selected="true">Backend</button>
-      <button class="tab" role="tab" id="t-db" aria-controls="p-db" aria-selected="false" tabindex="-1">Database</button>
-      <button class="tab" role="tab" id="t-ar" aria-controls="p-ar" aria-selected="false" tabindex="-1">Architecture</button>
-      <button class="tab" role="tab" id="t-pr" aria-controls="p-pr" aria-selected="false" tabindex="-1">Practices</button>
-      <button class="tab" role="tab" id="t-to" aria-controls="p-to" aria-selected="false" tabindex="-1">Tools</button>
-    </div>
-    <div class="card">
-      <div class="tabpanel" role="tabpanel" id="p-be" aria-labelledby="t-be">
-        <p>Building secure, well-validated REST APIs that front-end teams can integrate with confidently.</p>
-        <div class="chips"><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">ASP.NET Core</span><span class="chip">Web API</span><span class="chip">RESTful API Design</span><span class="chip">CRUD Operations</span><span class="chip">API Integration</span><span class="chip">Data Validation</span></div>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="p-db" aria-labelledby="t-db" hidden>
-        <p>Relational design plus the right data access tool for each job: ORM convenience or raw speed.</p>
-        <div class="chips"><span class="chip">Microsoft SQL Server</span><span class="chip">Stored Procedures</span><span class="chip">SQL Queries</span><span class="chip">Query Optimization</span><span class="chip">ADO.NET</span><span class="chip">Entity Framework Core</span><span class="chip">Dapper</span><span class="chip">Relational Design</span></div>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="p-ar" aria-labelledby="t-ar" hidden>
-        <p>Layered designs with clear boundaries so features stay easy to change, test and extend.</p>
-        <div class="chips"><span class="chip">Clean Architecture</span><span class="chip">Onion Architecture</span><span class="chip">Repository Pattern</span><span class="chip">Mediator Pattern (MediatR)</span><span class="chip">Layered Architecture</span></div>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="p-pr" aria-labelledby="t-pr" hidden>
-        <p>Habits that keep production code readable, reusable and reliable.</p>
-        <div class="chips"><span class="chip">OOP</span><span class="chip">SOLID Principles</span><span class="chip">Clean Code</span><span class="chip">Code Reusability</span><span class="chip">Exception Handling</span><span class="chip">Performance Tuning</span></div>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="p-to" aria-labelledby="t-to" hidden>
-        <p>Day-to-day collaboration and delivery tooling.</p>
-        <div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Jira</span><span class="chip">Agile</span><span class="chip">Scrum</span><span class="chip">Sprint Planning</span><span class="chip">Task Tracking</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ARCHITECTURE -->
-<section id="architecture">
-  <div class="eyebrow reveal">Architecture</div>
-  <h2 class="title reveal">How I structure <span class="grad">backend projects</span></h2>
-  <p class="sub reveal">Hover or tap a layer to see what lives there. Dependencies always point inward.</p>
-
-  <div class="arch-grid" data-layers>
-    <div class="onion reveal" role="group" aria-label="Onion architecture diagram">
-      <div class="ring" data-layer="api">API</div>
-      <div class="ring" data-layer="infra">Infrastructure</div>
-      <div class="ring" data-layer="app">Application</div>
-      <div class="ring active" data-layer="domain">Domain</div>
-    </div>
-    <div class="layer-list reveal" style="--d:.1s">
-      <button class="layer-btn active" data-layer="domain"><b>Domain (core)</b><span>Entities and business rules, plus repository interfaces. Depends on nothing else.</span></button>
-      <button class="layer-btn" data-layer="app"><b>Application</b><span>Use cases as MediatR requests and handlers, DTOs and validation. Talks to the domain through interfaces.</span></button>
-      <button class="layer-btn" data-layer="infra"><b>Infrastructure</b><span>Repository implementations using Dapper, EF Core or ADO.NET, stored procedures and SQL Server access.</span></button>
-      <button class="layer-btn" data-layer="api"><b>API / Presentation</b><span>Thin ASP.NET Core controllers, middleware, exception handling and dependency injection setup.</span></button>
-      <p class="dep-note">Result: business logic stays independent of the database and framework, so it is easier to test and change.</p>
-    </div>
-  </div>
-
-  <div class="flow reveal" aria-label="Typical request flow">
-    <div class="flow-node" style="--i:0">Client<small>HTTP request</small></div>
-    <div class="flow-node" style="--i:1">Controller<small>validates input</small></div>
-    <div class="flow-node" style="--i:2">MediatR Handler<small>use case</small></div>
-    <div class="flow-node" style="--i:3">Repository<small>Dapper / EF Core</small></div>
-    <div class="flow-node" style="--i:4">SQL Server<small>stored procedure</small></div>
-  </div>
-</section>
-
-<!-- CODE -->
-<section id="code">
-  <div class="eyebrow reveal">Code</div>
-  <h2 class="title reveal">A look at <span class="grad">my coding style</span></h2>
-  <p class="sub reveal">Short illustrative samples of the patterns I use daily. They are examples written for this page, not code from any employer.</p>
-
-  <div data-tabs class="reveal">
-    <div class="tablist" role="tablist" aria-label="Code samples">
-      <button class="tab" role="tab" id="c-ctl" aria-controls="cp-ctl" aria-selected="true">Controller</button>
-      <button class="tab" role="tab" id="c-han" aria-controls="cp-han" aria-selected="false" tabindex="-1">MediatR Handler</button>
-      <button class="tab" role="tab" id="c-rep" aria-controls="cp-rep" aria-selected="false" tabindex="-1">Repository (Dapper)</button>
-    </div>
-
-    <div class="tabpanel" role="tabpanel" id="cp-ctl" aria-labelledby="c-ctl">
-      <div class="code-wrap">
-        <div class="code-bar"><div class="dots"><i></i><i></i><i></i></div><span class="fname">EmployeesController.cs</span><button class="copy-btn" data-copy-target="#code-ctl">Copy</button></div>
-<pre><code id="code-ctl" data-lang="csharp">
-[ApiController]
-[Route("api/[controller]")]
-public class EmployeesController : ControllerBase
-{
-    private readonly IMediator _mediator;
-
-    public EmployeesController(IMediator mediator) => _mediator = mediator;
-
-    // Controllers stay thin: they only translate HTTP to a use case.
-    [HttpGet("{id:int}")]
-    public async Task&lt;ActionResult&lt;EmployeeDto&gt;&gt; GetById(int id, CancellationToken ct)
-    {
-        var result = await _mediator.Send(new GetEmployeeQuery(id), ct);
-        return Ok(result);
-    }
-}
-</code></pre>
-      </div>
-    </div>
-
-    <div class="tabpanel" role="tabpanel" id="cp-han" aria-labelledby="c-han" hidden>
-      <div class="code-wrap">
-        <div class="code-bar"><div class="dots"><i></i><i></i><i></i></div><span class="fname">GetEmployeeHandler.cs</span><button class="copy-btn" data-copy-target="#code-han">Copy</button></div>
-<pre><code id="code-han" data-lang="csharp">
-public record GetEmployeeQuery(int Id) : IRequest&lt;EmployeeDto&gt;;
-
-public class GetEmployeeHandler : IRequestHandler&lt;GetEmployeeQuery, EmployeeDto&gt;
-{
-    private readonly IEmployeeRepository _repository;
-
-    public GetEmployeeHandler(IEmployeeRepository repository) => _repository = repository;
-
-    public async Task&lt;EmployeeDto&gt; Handle(GetEmployeeQuery request, CancellationToken ct)
-    {
-        var employee = await _repository.GetByIdAsync(request.Id, ct);
-
-        if (employee is null)
-            throw new NotFoundException("Employee", request.Id);
-
-        return new EmployeeDto(employee.Id, employee.FullName, employee.Department);
-    }
-}
-</code></pre>
-      </div>
-    </div>
-
-    <div class="tabpanel" role="tabpanel" id="cp-rep" aria-labelledby="c-rep" hidden>
-      <div class="code-wrap">
-        <div class="code-bar"><div class="dots"><i></i><i></i><i></i></div><span class="fname">EmployeeRepository.cs</span><button class="copy-btn" data-copy-target="#code-rep">Copy</button></div>
-<pre><code id="code-rep" data-lang="csharp">
-public class EmployeeRepository : IEmployeeRepository
-{
-    private readonly IDbConnectionFactory _factory;
-
-    public EmployeeRepository(IDbConnectionFactory factory) => _factory = factory;
-
-    public async Task&lt;Employee?&gt; GetByIdAsync(int id, CancellationToken ct)
-    {
-        using var db = _factory.Create();
-
-        // Dapper + stored procedure: fast, explicit and easy to tune in SQL Server.
-        return await db.QuerySingleOrDefaultAsync&lt;Employee&gt;(
-            new CommandDefinition(
-                "usp_Employee_GetById",
-                new { Id = id },
-                commandType: CommandType.StoredProcedure,
-                cancellationToken: ct));
-    }
-}
-</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="eyebrow reveal">Projects</div>
-  <h2 class="title reveal">Things I've <span class="grad">built and am building</span></h2>
-  <p class="sub reveal">Production systems I contributed to, and two products I'm developing myself.</p>
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="eyebrow reveal">Products</div>
+  <h2 class="title reveal">Software for <span class="grad">growing businesses</span></h2>
+  <p class="sub reveal">Two products, one goal: help companies spend less time on admin and more time on growth. Launching soon.</p>
 
   <div class="proj-grid">
     <article class="card hover proj-card soon reveal">
-      <div class="top"><span class="kind">Personal product</span><span class="badge dev"><i class="dot"></i> In development</span></div>
+      <div class="top"><span class="kind">Product</span><span class="badge dev"><i class="dot"></i> Coming soon</span></div>
       <h3>NexaERP</h3>
-      <p>A modular Enterprise Resource Planning platform built API-first with ASP.NET Core and SQL Server.</p>
+      <p class="tagline">One platform to run your operations.</p>
       <ul>
-        <li>Clean / Onion Architecture from day one</li>
-        <li>Optimized SQL Server data layer</li>
-        <li>Designed for modular business workflows</li>
+        <li>Core business workflows in a single, connected system</li>
+        <li>Clear visibility across teams and departments</li>
+        <li>Secure access with controls for every role</li>
+        <li>Built to scale as your business grows</li>
       </ul>
       <div class="progress-line" aria-hidden="true"></div>
-      <div class="small-note">Work in progress</div>
-      <div class="chips" style="margin-top:14px"><span class="chip">ASP.NET Core</span><span class="chip">SQL Server</span><span class="chip">MediatR</span></div>
-      <div class="actions"><span class="btn is-disabled" aria-disabled="true">Coming soon</span></div>
+      <div class="small-note">Currently in development</div>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:ashishnaikade15@gmail.com?subject=NexaERP%20early%20access&body=Hi%20Ashish%2C%0A%0AI%27m%20interested%20in%20NexaERP.%20Company%3A%20%0AEmployees%3A%20%0A">Get early access</a>
+      </div>
     </article>
 
     <article class="card hover proj-card soon reveal" style="--d:.1s">
-      <div class="top"><span class="kind">Personal product</span><span class="badge dev"><i class="dot"></i> In development</span></div>
+      <div class="top"><span class="kind">Product</span><span class="badge dev"><i class="dot"></i> Coming soon</span></div>
       <h3>NexaHRM</h3>
-      <p>A modern Human Resource Management platform covering core HR workflows, designed API-first.</p>
+      <p class="tagline">People management, simplified.</p>
       <ul>
-        <li>Secure, validated REST APIs</li>
-        <li>Layered architecture with the Repository Pattern</li>
-        <li>Built for maintainability and performance</li>
+        <li>Employee records organized in one place</li>
+        <li>Attendance and leave management made easy</li>
+        <li>Clear reports that help HR teams decide faster</li>
+        <li>Secure, role-based access to sensitive data</li>
       </ul>
       <div class="progress-line" aria-hidden="true"></div>
-      <div class="small-note">Work in progress</div>
-      <div class="chips" style="margin-top:14px"><span class="chip">ASP.NET Core</span><span class="chip">Dapper</span><span class="chip">SQL Server</span></div>
-      <div class="actions"><span class="btn is-disabled" aria-disabled="true">Coming soon</span></div>
-    </article>
-
-    <article class="card hover proj-card reveal" style="--d:.15s">
-      <div class="top"><span class="kind">Professional · CycaSoft India</span><span class="badge"><i class="dot"></i> Delivered</span></div>
-      <h3>Human Resource Management System</h3>
-      <p>Backend modules supporting HR business operations.</p>
-      <ul>
-        <li>RESTful APIs with ASP.NET Core Web API</li>
-        <li>CRUD with EF Core and ADO.NET, Dapper for fast reads</li>
-        <li>Optimized SQL Server queries and stored procedures</li>
-      </ul>
-      <div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">EF Core</span><span class="chip">Dapper</span><span class="chip">Onion Architecture</span></div>
-      <div class="actions"><a class="btn" href="#experience">See details</a></div>
-    </article>
-
-    <article class="card hover proj-card reveal" style="--d:.2s">
-      <div class="top"><span class="kind">Professional · CycaSoft India</span><span class="badge"><i class="dot"></i> Delivered</span></div>
-      <h3>Enterprise Resource Planning System</h3>
-      <p>Backend development and enhancement across multiple ERP modules.</p>
-      <ul>
-        <li>RESTful APIs supporting business workflows</li>
-        <li>Stored procedure creation and tuning</li>
-        <li>Bug fixing, refactoring and performance work</li>
-      </ul>
-      <div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">SQL Server</span><span class="chip">ADO.NET</span><span class="chip">Dapper</span></div>
-      <div class="actions"><a class="btn" href="#experience">See details</a></div>
+      <div class="small-note">Currently in development</div>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:ashishnaikade15@gmail.com?subject=NexaHRM%20early%20access&body=Hi%20Ashish%2C%0A%0AI%27m%20interested%20in%20NexaHRM.%20Company%3A%20%0AEmployees%3A%20%0A">Get early access</a>
+      </div>
     </article>
   </div>
-  <p class="small-note reveal" style="margin-top:22px">Follow progress on <a href="https://github.com/ashish-nexahub" target="_blank" rel="noopener" style="color:var(--a2)">GitHub</a>.</p>
-</section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="eyebrow reveal">Experience</div>
-  <h2 class="title reveal">Work <span class="grad">experience</span></h2>
-  <p class="sub reveal">Expand a project to see what I worked on.</p>
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-head"><h3>CycaSoft India Pvt. Ltd.</h3><span class="date">July 2025 – July 2026</span></div>
-      <div class="role">Junior .NET Developer (Internship) · Pune, India</div>
-
-      <details class="acc" open>
-        <summary>Human Resource Management System (HRMS)</summary>
-        <div class="acc-body"><ul>
-          <li>Developed and maintained backend modules using ASP.NET Core Web API, implementing RESTful APIs to support HR business operations.</li>
-          <li>Implemented CRUD operations using Entity Framework Core and ADO.NET for efficient management of employee and organizational data.</li>
-          <li>Used Dapper for optimized data access and improved query execution performance.</li>
-          <li>Designed and optimized SQL Server queries and stored procedures for reliable data retrieval and processing.</li>
-          <li>Followed Onion Architecture and the Repository Pattern for clean code and separation of concerns.</li>
-          <li>Collaborated with frontend developers to integrate APIs, resolve issues and deliver backend features.</li>
-        </ul></div>
-      </details>
-
-      <details class="acc">
-        <summary>Enterprise Resource Planning System (ERP)</summary>
-        <div class="acc-body"><ul>
-          <li>Contributed to backend development and enhancement of ERP modules using ASP.NET Core Web API and SQL Server.</li>
-          <li>Designed and implemented RESTful APIs supporting business workflows and communication between components.</li>
-          <li>Developed CRUD functionality with ADO.NET and Entity Framework Core, using Dapper for high-performance operations.</li>
-          <li>Created, modified and optimized stored procedures and queries to improve processing and performance.</li>
-          <li>Troubleshot bugs, refactored existing code and supported performance improvements across ERP modules.</li>
-        </ul></div>
-      </details>
+  <div class="cta-band reveal">
+    <div>
+      <h3>Be among the first to try Nexa</h3>
+      <p>Tell me about your business and I'll reach out when early access opens.</p>
     </div>
-  </div>
-</section>
-
-<!-- HOW I WORK -->
-<section id="approach">
-  <div class="eyebrow reveal">Approach</div>
-  <h2 class="title reveal">How I <span class="grad">work</span></h2>
-  <p class="sub reveal">What you can expect when we build something together.</p>
-  <div class="work-grid">
-    <div class="card hover reveal"><span class="ico">🏛️</span><h3>Structure first</h3><p>Onion / Clean Architecture and the Repository Pattern keep code organized, testable and easy to extend.</p></div>
-    <div class="card hover reveal" style="--d:.08s"><span class="ico">⚡</span><h3>Performance minded</h3><p>Query optimization, stored procedures and the right data access tool (EF Core, Dapper or ADO.NET) for each case.</p></div>
-    <div class="card hover reveal" style="--d:.16s"><span class="ico">🛡️</span><h3>Reliable by default</h3><p>Input validation and consistent exception handling so APIs fail clearly and safely.</p></div>
-    <div class="card hover reveal" style="--d:.24s"><span class="ico">🤝</span><h3>Team friendly</h3><p>Agile / Scrum, Jira task tracking and close work with front-end developers on API integration.</p></div>
+    <a class="btn btn-primary" href="mailto:ashishnaikade15@gmail.com?subject=Nexa%20early%20access">Join the early-access list</a>
   </div>
 </section>
 
@@ -424,21 +198,20 @@ public class EmployeeRepository : IEmployeeRepository
 <section id="faq">
   <div class="eyebrow reveal">FAQ</div>
   <h2 class="title reveal">Quick <span class="grad">answers</span></h2>
-  <p class="sub reveal">Things recruiters and hiring managers often ask.</p>
+  <p class="sub reveal">Common questions from businesses and recruiters.</p>
   <div class="reveal">
-    <details class="acc" open><summary>What is your main tech stack?</summary><div class="acc-body">C# and ASP.NET Core Web API with Microsoft SQL Server. For data access I use Entity Framework Core, Dapper and ADO.NET, along with stored procedures.</div></details>
-    <details class="acc"><summary>How do you structure a backend project?</summary><div class="acc-body">Onion / Clean Architecture with the Repository Pattern and MediatR. Controllers stay thin, use cases live in handlers, and data access sits behind interfaces. See the Architecture and Code sections above.</div></details>
-    <details class="acc"><summary>Have you worked in a team environment?</summary><div class="acc-body">Yes. I worked in Agile (Scrum) teams using Jira for sprint planning and task tracking, and collaborated with front-end developers to integrate APIs and resolve issues.</div></details>
-    <details class="acc"><summary>What are NexaERP and NexaHRM?</summary><div class="acc-body">Two products I'm building myself with the same architecture principles I use professionally. Both are under development and marked "Coming soon" above.</div></details>
-    <details class="acc"><summary>Where can I see more of your work?</summary><div class="acc-body">My <a href="https://github.com/ashish-nexahub" target="_blank" rel="noopener" style="color:var(--a2)">GitHub profile</a> and my <a href="https://www.linkedin.com/in/ashish-naikade-3b1a92233/" target="_blank" rel="noopener" style="color:var(--a2)">LinkedIn</a>. You can also download my resume from the top of this page.</div></details>
+    <details class="acc" open><summary>What are NexaERP and NexaHRM?</summary><div class="acc-body">NexaERP is business software for running day-to-day operations in one place. NexaHRM is a human resource management platform for HR teams. Both are being developed by me and are coming soon.</div></details>
+    <details class="acc"><summary>When will they be available?</summary><div class="acc-body">They are currently in development. Use the "Get early access" button above and I'll contact you when early access opens.</div></details>
+    <details class="acc"><summary>Can I get a demo or discuss my requirements?</summary><div class="acc-body">Yes. Email me at <a href="mailto:ashishnaikade15@gmail.com" style="color:var(--a2)">ashishnaikade15@gmail.com</a> with a few details about your business and what you need.</div></details>
+    <details class="acc"><summary>I'm a recruiter. Where can I find your background?</summary><div class="acc-body">My full experience and skills are in my resume. Use the Resume button at the top of this page. You can also reach me on <a href="https://www.linkedin.com/in/ashish-naikade-3b1a92233/" target="_blank" rel="noopener" style="color:var(--a2)">LinkedIn</a>.</div></details>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="card contact-box reveal">
-    <h2>Let's <span class="grad">work together</span></h2>
-    <p>I'm open to .NET backend opportunities. Reach out and let's build something reliable.</p>
+    <h2>Let's <span class="grad">talk</span></h2>
+    <p>Interested in NexaERP or NexaHRM, or want to discuss an opportunity? Reach out.</p>
     <div class="email-row">
       <code>ashishnaikade15@gmail.com</code>
       <button class="btn" data-copy="ashishnaikade15@gmail.com">Copy email</button>
@@ -454,7 +227,7 @@ public class EmployeeRepository : IEmployeeRepository
 
 </main>
 
-<footer>© <span id="yr"></span> Ashish Naikade · Designed and built with HTML, CSS &amp; JavaScript</footer>
+<footer>© <span id="yr"></span> Ashish Naikade · NexaERP &amp; NexaHRM</footer>
 
 <button id="toTop" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
@@ -465,9 +238,8 @@ public class EmployeeRepository : IEmployeeRepository
 <script src="assets/js/typing.js"></script>
 <script src="assets/js/reveal.js"></script>
 <script src="assets/js/particles.js"></script>
-<script src="assets/js/tabs.js"></script>
-<script src="assets/js/code.js"></script>
 <script src="assets/js/copy.js"></script>
+<script src="assets/js/protect.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
