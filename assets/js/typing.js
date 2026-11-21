@@ -2,8 +2,11 @@
 (function () {
   const words = ['secure REST APIs', 'ASP.NET Core backends', 'optimized SQL Server queries', 'clean, maintainable code'];
   const el = document.getElementById('typed');
-  let w = 0, c = 0, del = false;
+  if (!el) return;
 
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = words[0]; return; }
+
+  let w = 0, c = 0, del = false;
   (function type() {
     const word = words[w];
     el.textContent = word.slice(0, c);

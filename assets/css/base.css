@@ -1,32 +1,49 @@
-/* Reset, typography and global utilities */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* Reset, typography, global utilities */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
+  transition: background-color .35s ease, color .35s ease;
 }
 a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; cursor: pointer; }
+::selection { background: var(--a1); color: #fff; }
 
-#bg { position: fixed; inset: 0; z-index: -1; }
+:focus-visible { outline: 2px solid var(--a2); outline-offset: 3px; border-radius: 6px; }
 
-section { padding: 110px 6vw; max-width: 1200px; margin: auto; }
-h2.title { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
-.sub { color: var(--muted); margin-bottom: 46px; }
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 200;
+  background: var(--a1); color: #fff; padding: 10px 16px; border-radius: 10px;
+}
+.skip-link:focus { top: 12px; }
+
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+
+section { padding: 100px 6vw; max-width: 1200px; margin: auto; }
+
+.eyebrow {
+  color: var(--a2); font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; font-size: .8rem; margin-bottom: 8px;
+}
+h2.title { font-size: clamp(1.9rem, 4vw, 2.7rem); line-height: 1.15; margin-bottom: 12px; }
+.sub { color: var(--muted); margin-bottom: 44px; max-width: 640px; }
 .date { color: var(--a2); font-size: .9rem; font-weight: 600; }
 
 .grad {
   background: linear-gradient(90deg, var(--a1), var(--a2), var(--a3));
   background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shine 6s linear infinite;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  animation: shine 7s linear infinite;
 }
 
 footer {
-  text-align: center; padding: 30px; color: var(--muted);
-  font-size: .85rem; border-top: 1px solid var(--border);
+  text-align: center; padding: 34px 6vw; color: var(--muted);
+  font-size: .88rem; border-top: 1px solid var(--border);
 }
+footer a { color: var(--a2); }
