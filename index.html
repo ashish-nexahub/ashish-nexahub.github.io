@@ -5,121 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ashish Naikade | .NET Backend Developer</title>
 <meta name="description" content="Portfolio of Ashish Naikade, .NET Backend Developer specializing in ASP.NET Core Web API, SQL Server and Clean Architecture.">
-<style>
-:root{
-  --bg:#070914; --bg2:#0d1124; --card:rgba(255,255,255,.04); --border:rgba(255,255,255,.09);
-  --text:#e8ebf7; --muted:#9aa3c4; --a1:#7c5cff; --a2:#22d3ee; --a3:#f472b6;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-#bg{position:fixed;inset:0;z-index:-1}
-a{color:inherit;text-decoration:none}
-.grad{background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
-@keyframes shine{to{background-position:200% center}}
 
-/* progress bar */
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));z-index:100}
-
-/* nav */
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:16px 6vw;backdrop-filter:blur(14px);background:rgba(7,9,20,.55);border-bottom:1px solid var(--border);z-index:50}
-.logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}
-nav ul{display:flex;gap:28px;list-style:none}
-nav ul a{color:var(--muted);font-size:.95rem;position:relative;transition:color .3s}
-nav ul a::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--a2);transition:width .3s}
-nav ul a:hover{color:#fff}nav ul a:hover::after{width:100%}
-.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
-
-section{padding:110px 6vw;max-width:1200px;margin:auto}
-h2.title{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
-.sub{color:var(--muted);margin-bottom:46px}
-
-/* hero */
-#home{min-height:100vh;display:flex;align-items:center;gap:50px;flex-wrap:wrap-reverse;justify-content:space-between}
-.hero-text{flex:1 1 420px}
-.hello{color:var(--a2);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
-h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.05;margin:14px 0}
-.typed{font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--muted);min-height:2.2em}
-.typed span{color:var(--text);font-weight:600}
-.cursor{display:inline-block;width:2px;height:1.1em;background:var(--a2);vertical-align:middle;margin-left:3px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero-text p.lead{max-width:560px;margin:18px 0 30px;color:var(--muted)}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:13px 28px;border-radius:50px;font-weight:600;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;display:inline-block}
-.btn.primary{background:linear-gradient(135deg,var(--a1),var(--a2));border:0;box-shadow:0 8px 30px rgba(124,92,255,.35)}
-.btn:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(34,211,238,.25)}
-.socials{display:flex;gap:16px;margin-top:30px}
-.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--border);background:var(--card);transition:.3s;font-size:.85rem;font-weight:700}
-.socials a:hover{background:var(--a1);transform:translateY(-4px) rotate(8deg)}
-
-.avatar-wrap{flex:0 1 340px;display:grid;place-items:center;position:relative}
-.avatar{width:300px;height:300px;border-radius:50%;display:grid;place-items:center;font-size:5.5rem;font-weight:800;position:relative;
-  background:linear-gradient(135deg,var(--a1),var(--a2) 55%,var(--a3));animation:float 5s ease-in-out infinite;box-shadow:0 0 80px rgba(124,92,255,.45)}
-.avatar::before,.avatar::after{content:'';position:absolute;border-radius:50%;border:2px dashed rgba(255,255,255,.25);animation:spin 18s linear infinite}
-.avatar::before{inset:-22px}
-.avatar::after{inset:-46px;animation-direction:reverse;animation-duration:28s;border-color:rgba(34,211,238,.35)}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{50%{transform:translateY(-18px)}}
-.chip-float{position:absolute;padding:8px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--border);font-size:.8rem;font-weight:600;animation:float 4s ease-in-out infinite}
-.c1{top:6%;left:-4%}.c2{bottom:12%;right:-6%;animation-delay:-1.5s}.c3{bottom:-2%;left:6%;animation-delay:-3s}
-
-/* about / stats */
-.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
-.glass{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;backdrop-filter:blur(10px)}
-.about-grid p{color:var(--muted);margin-bottom:14px}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.stat{text-align:center;padding:24px 10px}
-.stat b{font-size:2.4rem;display:block}
-.stat small{color:var(--muted)}
-
-/* skills */
-.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.skill-card{transition:transform .35s,border-color .35s}
-.skill-card:hover{transform:translateY(-8px);border-color:var(--a1)}
-.skill-card h3{margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{padding:6px 14px;border-radius:50px;font-size:.85rem;background:rgba(124,92,255,.12);border:1px solid rgba(124,92,255,.35);transition:.25s}
-.chip:hover{background:var(--a1);transform:scale(1.08)}
-.bars{margin-top:46px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px 40px}
-.bar .row{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
-.bar .track{height:8px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden}
-.bar .fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--a1),var(--a2));transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
-
-/* timeline */
-.timeline{position:relative;padding-left:34px}
-.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--a1),var(--a2),transparent)}
-.tl-item{position:relative;margin-bottom:34px}
-.tl-item::before{content:'';position:absolute;left:-34px;top:8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--a2);box-shadow:0 0 14px var(--a2)}
-.tl-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px}
-.tl-head h3{font-size:1.25rem}
-.date{color:var(--a2);font-size:.9rem;font-weight:600}
-.role{color:var(--muted);margin-bottom:16px}
-.proj{margin-top:22px}
-.proj h4{margin-bottom:10px;color:var(--a3)}
-.proj ul{list-style:none}
-.proj li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--muted);font-size:.95rem}
-.proj li::before{content:'▹';position:absolute;left:0;color:var(--a2)}
-
-/* contact */
-.contact-box{text-align:center;padding:60px 30px}
-.contact-box h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:14px}
-.contact-box p{color:var(--muted);max-width:520px;margin:0 auto 30px}
-footer{text-align:center;padding:30px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
-.reveal.show{opacity:1;transform:none}
-
-@media(max-width:800px){
-  .about-grid{grid-template-columns:1fr}
-  nav ul{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(7,9,20,.97);padding:20px 6vw;gap:18px;display:none}
-  nav ul.open{display:flex}
-  .burger{display:block}
-  .avatar{width:220px;height:220px;font-size:4rem}
-  section{padding:90px 6vw}
-}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-</style>
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 <canvas id="bg"></canvas>
@@ -138,6 +30,7 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.85rem;border
   </ul>
 </nav>
 
+<main>
 <section id="home">
   <div class="hero-text">
     <div class="hello">👋 Hello, I'm</div>
@@ -155,7 +48,8 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.85rem;border
     </div>
   </div>
   <div class="avatar-wrap">
-    <div class="avatar">AN</div>
+    <!-- Put your photo at assets/images/ashish.jpg. If it's missing, the initials show instead. -->
+    <div class="avatar">AN<img src="assets/images/ashish.jpg" alt="Ashish Naikade" onerror="this.remove()"></div>
     <span class="chip-float c1">ASP.NET Core</span>
     <span class="chip-float c2">SQL Server</span>
     <span class="chip-float c3">Clean Arch</span>
@@ -234,8 +128,8 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.85rem;border
 <section id="education">
   <h2 class="title reveal">Edu<span class="grad">cation</span></h2>
   <p class="sub reveal">Academic background</p>
-  <div class="glass reveal" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
-    <div><h3>Bachelor of Business Administration in Computer Application (BBA-CA)</h3><p style="color:var(--muted)">Savitribai Phule University, Pune</p></div>
+  <div class="glass edu-card reveal">
+    <div><h3>Bachelor of Business Administration in Computer Application (BBA-CA)</h3><p>Savitribai Phule University, Pune</p></div>
     <span class="date">2023 – 2025</span>
   </div>
 </section>
@@ -244,93 +138,21 @@ footer{text-align:center;padding:30px;color:var(--muted);font-size:.85rem;border
   <div class="glass contact-box reveal">
     <h2>Let's <span class="grad">work together</span></h2>
     <p>I'm open to .NET backend opportunities. Reach out and let's build something reliable.</p>
-    <div class="btns" style="justify-content:center">
+    <div class="btns">
       <a class="btn primary" href="mailto:ashishnaikade15@gmail.com">ashishnaikade15@gmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/ashish-naikade-3b1a92233/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/ashish-nexahub" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </section>
+</main>
 
 <footer>© <span id="yr"></span> Ashish Naikade · Built with HTML, CSS &amp; JS</footer>
 
-<script>
-// year
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-// mobile menu
-const menu = document.getElementById('menu');
-document.getElementById('burger').onclick = () => menu.classList.toggle('open');
-menu.querySelectorAll('a').forEach(a => a.onclick = () => menu.classList.remove('open'));
-
-// scroll progress
-addEventListener('scroll', () => {
-  const h = document.documentElement;
-  document.getElementById('progress').style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-});
-
-// typing effect
-const words = ['secure REST APIs', 'ASP.NET Core backends', 'optimized SQL Server queries', 'clean, maintainable code'];
-const el = document.getElementById('typed');
-let w = 0, c = 0, del = false;
-(function type() {
-  const word = words[w];
-  el.textContent = word.slice(0, c);
-  if (!del && c === word.length) { del = true; return setTimeout(type, 1500); }
-  if (del && c === 0) { del = false; w = (w + 1) % words.length; }
-  c += del ? -1 : 1;
-  setTimeout(type, del ? 40 : 80);
-})();
-
-// reveal + counters + bars
-const counted = new WeakSet();
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('show');
-    e.target.querySelectorAll('[data-count]').forEach(n => {
-      if (counted.has(n)) return; counted.add(n);
-      const end = parseFloat(n.dataset.count), suf = n.dataset.suffix || '';
-      const dec = end % 1 ? 1 : 0, t0 = performance.now();
-      (function tick(t) {
-        const p = Math.min((t - t0) / 1600, 1);
-        n.textContent = (end * (1 - Math.pow(1 - p, 3))).toFixed(dec) + suf;
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
-    });
-    if (e.target.id === 'bars') e.target.querySelectorAll('.fill').forEach(f => f.style.width = f.dataset.w + '%');
-  });
-}, { threshold: .15 });
-document.querySelectorAll('.reveal').forEach(r => io.observe(r));
-
-// particle network background
-const cv = document.getElementById('bg'), ctx = cv.getContext('2d');
-let W, H, pts = [], mouse = { x: -999, y: -999 };
-function resize() {
-  W = cv.width = innerWidth; H = cv.height = innerHeight;
-  pts = Array.from({ length: Math.min(90, Math.floor(W * H / 16000)) }, () => ({
-    x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .5, vy: (Math.random() - .5) * .5
-  }));
-}
-addEventListener('resize', resize); resize();
-addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-(function draw() {
-  ctx.clearRect(0, 0, W, H);
-  pts.forEach((p, i) => {
-    p.x += p.vx; p.y += p.vy;
-    if (p.x < 0 || p.x > W) p.vx *= -1;
-    if (p.y < 0 || p.y > H) p.vy *= -1;
-    ctx.fillStyle = 'rgba(124,92,255,.8)';
-    ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, 7); ctx.fill();
-    for (let j = i + 1; j < pts.length; j++) {
-      const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
-      if (d < 130) { ctx.strokeStyle = `rgba(34,211,238,${.22 * (1 - d / 130)})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
-    }
-    const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-    if (dm < 160) { ctx.strokeStyle = `rgba(244,114,182,${.4 * (1 - dm / 160)})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
-  });
-  requestAnimationFrame(draw);
-})();
-</script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/typing.js"></script>
+<script src="assets/js/reveal.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

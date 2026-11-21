@@ -1,0 +1,32 @@
+/* Reset, typography and global utilities */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+
+#bg { position: fixed; inset: 0; z-index: -1; }
+
+section { padding: 110px 6vw; max-width: 1200px; margin: auto; }
+h2.title { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+.sub { color: var(--muted); margin-bottom: 46px; }
+.date { color: var(--a2); font-size: .9rem; font-weight: 600; }
+
+.grad {
+  background: linear-gradient(90deg, var(--a1), var(--a2), var(--a3));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+footer {
+  text-align: center; padding: 30px; color: var(--muted);
+  font-size: .85rem; border-top: 1px solid var(--border);
+}

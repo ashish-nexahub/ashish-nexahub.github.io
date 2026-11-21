@@ -1,0 +1,15 @@
+/* Mobile / tablet overrides (keep this file last) */
+@media (max-width: 800px) {
+  section { padding: 90px 6vw; }
+  .about-grid { grid-template-columns: 1fr; }
+
+  nav ul {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 18px; display: none;
+    background: rgba(7, 9, 20, .97); padding: 20px 6vw;
+  }
+  nav ul.open { display: flex; }
+  .burger { display: block; }
+
+  .avatar { width: 220px; height: 220px; font-size: 4rem; }
+}
