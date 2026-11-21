@@ -51,6 +51,7 @@
 .avatar {
   width: 290px; height: 290px; border-radius: 50%; position: relative; z-index: 0;
   display: grid; place-items: center; font-size: 5.2rem; font-weight: 800; color: #fff;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
   background: linear-gradient(135deg, var(--a1), var(--a2) 55%, var(--a3));
   animation: float 5s ease-in-out infinite;
   box-shadow: 0 0 70px var(--glow);
@@ -61,7 +62,15 @@
 }
 .avatar::before { inset: -22px; }
 .avatar::after { inset: -46px; animation-direction: reverse; animation-duration: 32s; border-color: rgba(34, 211, 238, .35); }
-.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.avatar .initials { position: relative; z-index: 0; }
+/* Photo is a CSS background (not an <img>): nothing to drag or "Save image as" directly */
+.avatar .photo {
+  position: absolute; inset: 0; border-radius: 50%; z-index: 1;
+  background: url('../images/ashish.jpg') center / cover no-repeat;
+  pointer-events: none;
+}
+/* Transparent layer on top that swallows clicks, long-press and drags */
+.avatar .shield { position: absolute; inset: 0; border-radius: 50%; z-index: 2; background: transparent; }
 
 .chip-float {
   position: absolute; padding: 8px 14px; border-radius: 12px; font-size: .8rem; font-weight: 600;
@@ -98,20 +107,6 @@
 }
 .chip:hover { background: var(--a1); color: #fff; transform: scale(1.06); }
 
-/* Tabs */
-.tablist { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.tab {
-  padding: 9px 18px; border-radius: 50px; font-weight: 600; font-size: .9rem;
-  background: var(--surface); border: 1px solid var(--border);
-  transition: background-color .25s, color .25s, border-color .25s, transform .25s var(--ease);
-}
-.tab:hover { transform: translateY(-2px); border-color: var(--a2); }
-.tab[aria-selected="true"] { background: linear-gradient(135deg, var(--a1), var(--a2)); color: #fff; border-color: transparent; }
-.tabpanel[hidden] { display: none; }
-.tabpanel { animation: panel-in .45s var(--ease); }
-@keyframes panel-in { from { opacity: 0; transform: translateY(10px); } }
-.tabpanel > p { color: var(--muted); margin-bottom: 18px; }
-
 /* Accordion (details) */
 details.acc {
   background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -129,22 +124,3 @@ details.acc summary::after {
 details.acc[open] summary::after { transform: rotate(45deg); }
 details.acc .acc-body { padding: 0 20px 18px; color: var(--muted); font-size: .96rem; }
 
-/* Code block */
-.code-wrap { position: relative; background: var(--code-bg); border: 1px solid rgba(255, 255, 255, .08); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
-.code-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255, 255, 255, .04); border-bottom: 1px solid rgba(255, 255, 255, .07); }
-.code-bar .dots { display: flex; gap: 7px; }
-.code-bar .dots i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57; }
-.code-bar .dots i:nth-child(2) { background: #febc2e; }
-.code-bar .dots i:nth-child(3) { background: #28c840; }
-.code-bar .fname { color: var(--code-cm); font-size: .8rem; font-family: ui-monospace, Consolas, monospace; }
-.copy-btn {
-  background: rgba(255, 255, 255, .08); border: 0; color: var(--code-text); font-size: .78rem;
-  padding: 5px 12px; border-radius: 8px; transition: background-color .25s;
-}
-.copy-btn:hover { background: var(--a1); color: #fff; }
-.code-wrap pre { padding: 18px 20px; overflow-x: auto; font-size: .86rem; line-height: 1.7; tab-size: 4; }
-.code-wrap code { font-family: ui-monospace, 'Cascadia Code', Consolas, Menlo, monospace; color: var(--code-text); }
-.tok-kw { color: var(--code-kw); }
-.tok-ty { color: var(--code-ty); }
-.tok-str { color: var(--code-str); }
-.tok-cm { color: var(--code-cm); font-style: italic; }

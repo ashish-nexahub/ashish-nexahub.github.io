@@ -1,6 +1,6 @@
 // Hero typing effect: edit the words array to change the phrases
 (function () {
-  const words = ['secure REST APIs', 'ASP.NET Core backends', 'optimized SQL Server queries', 'clean, maintainable code'];
+  const words = ['secure REST APIs', 'business software', 'NexaERP and NexaHRM', 'clean, maintainable code'];
   const el = document.getElementById('typed');
   if (!el) return;
 

@@ -3,17 +3,12 @@
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes float { 50% { transform: translateY(-14px); } }
-@keyframes marquee { to { transform: translateX(-50%); } }
 @keyframes pulse-dot {
   0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, .55); }
   70% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
   100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
 }
 @keyframes sweep { to { transform: translateX(120%); } }
-@keyframes flow-glow {
-  0%, 22% { border-color: var(--a2); box-shadow: 0 0 0 3px rgba(34, 211, 238, .22); transform: translateY(-3px); }
-  30%, 100% { border-color: var(--border); box-shadow: none; transform: none; }
-}
 @keyframes bounce-y { 50% { transform: translateY(7px); } }
 
 /* Reveal only hides content when JS is running (html.js), so no-JS visitors see everything */

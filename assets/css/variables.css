@@ -54,11 +54,6 @@
   --r: 18px;
   --ease: cubic-bezier(.2, .8, .2, 1);
   --nav-h: 68px;
-  /* code blocks stay dark in both themes */
-  --code-bg: #0b0e1d;
-  --code-text: #d7dcf2;
-  --code-kw: #c4a7ff;
-  --code-ty: #5ee0f5;
-  --code-str: #9be7a6;
-  --code-cm: #6b7599;
+  /* SF Pro on Apple devices; Inter is a close fallback elsewhere */
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
