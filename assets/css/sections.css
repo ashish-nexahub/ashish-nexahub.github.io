@@ -37,3 +37,5 @@
 /* Contact extras */
 .email-row { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 22px; }
 .email-row code { font-size: 1.05rem; padding: 8px 16px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); font-family: inherit; }
+.proj-card h3 a:hover { color: var(--a2); }
+.proj-card .actions { display: flex; gap: 10px; flex-wrap: wrap; }
